@@ -10,9 +10,10 @@
     color: #333;
   }
   header {
-    background: #222;
-    color: #fff;
+    background: #fff;
+    color: #1e3c72;
     padding: 1rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   }
   nav {
     display: flex;
@@ -25,15 +26,83 @@
     gap: 1rem;
   }
   nav a {
-    color: #fff;
+    color: #1e3c72;
     text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 4px;
+    transition: color 0.3s ease;
   }
-  #hero {
-    background: #007BFF;
+  nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #1e3c72;
+    transition: width 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #16315e; /* une teinte légèrement plus foncée au survol */
+  }
+  
+  nav a:hover::after {
+    width: 100%;
+  }
+  .banner {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
     color: white;
-    text-align: center;
-    padding: 4rem 2rem;
+    padding: 60px 20px;
   }
+  
+  .banner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    gap: 40px;
+  }
+  
+  .banner-text {
+    text-align: center;
+    max-width: 600px;
+  }
+  
+  .banner-text h1 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+  }
+  
+  .banner-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+  }
+  
+  .btn_banner {
+    background-color: white;
+    color: #2a5298;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+  }
+  
+  .btn_banner:hover {
+    background-color: #2a5298;
+    color: white;
+  }
+  
+  .banner-image img {
+    width: 250px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  }
+  
   .btn {
     display: inline-block;
     margin-top: 1rem;
@@ -46,6 +115,40 @@
   section {
     padding: 3rem 2rem;
   }
+  /* Style général pour les titres de section */
+h2 {
+  font-size: 1.5rem;
+  color: #2c2c2c; /* Même bleu que les liens du nav */
+  position: relative;
+  margin-bottom: 30px;
+  text-align: left;
+  padding-bottom: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Soulignement moderne sous les h2 */
+h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px; /* Soulignement court et stylé */
+  height: 4px;
+  background-color: #1e3c72; /* Même couleur que les liens du menu */
+  border-radius: 2px;
+}
+#about {
+  background-color: #fff; /* contraste avec le fond #f4f4f4 du body */
+}
+#about p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  text-align: justify;
+  color: #333;
+}
+
   .project-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -95,5 +198,24 @@
     color: white;
     margin: 0 0.5rem;
     font-size: 1.2rem;
+  }
+
+  /* Responsive Banner  */
+   /* Version desktop */
+   @media (min-width: 768px) {
+    .banner-container {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+    }
+  
+    .banner-text {
+      max-width: 50%;
+    }
+  
+    .banner-image img {
+      width: 300px;
+    }
   }
     
