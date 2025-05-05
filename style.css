@@ -146,7 +146,7 @@ h2::after {
   font-size: 1.05rem;
   line-height: 1.8;
   text-align: justify;
-  color: #333;
+  color: #555;
 }
 
   .project-cards {
@@ -164,10 +164,35 @@ h2::after {
     width: 100%;
     border-radius: 6px;
   }
+  .card h3 {
+    font-size: 1.2rem;
+    margin: 1rem;
+    color: #1e3c72;
+  }
+  
+  .card p {
+    flex-grow: 1;
+    margin: 0 1rem 1rem;
+    color: #555;
+  }
+  
   .card-buttons {
-    margin-top: 1rem;
     display: flex;
     justify-content: space-between;
+    padding: 0 1rem 1rem;
+  }
+  .card-buttons .btn {
+    background-color: #1e3c72;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .card-buttons .btn:hover {
+    background-color: #16315e;
   }
   .skills-list {
     display: flex;
