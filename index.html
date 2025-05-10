@@ -3,18 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio | Sarah Dev</title>
+  <title>Portfolio | Maréme Thiaw</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 
 </head>
-<body>
+<body id="top">
 
   <header>
     <nav>
       <h1>Maréme Thiaw</h1>
-      <ul>
+      <button class="burger" aria-label="Menu">
+        <span class="icon icon-open">&#9776;</span>
+        <span class="icon icon-close">✖</span>
+      </button>
+      <ul class="nav-links">
         <li><a href="#about">À propos</a></li>
         <li><a href="#projects">Projets</a></li>
         <li><a href="#technos">Technologies & Outils</a></li>
@@ -31,7 +35,7 @@
           Diplômée en ingénierie mathématique, je conçois des applications web modernes,
           dynamiques et robustes.
         </p>
-        <a href="#projets" class="btn_banner">Voir mes projets</a>
+        <a href="#projects" class="btn_banner">Voir mes projets</a>
       </div>
       <div class="banner-image">
         <img src="https://img.freepik.com/free-vector/hand-drawn-muslim-girls-education-illustration_23-2150678462.jpg?t=st=1746280377~exp=1746283977~hmac=3408cb33d9c6c3ce74612c728a35fb84de244393dd83c92d27aec6f0e25c6eed&w=740" alt="Photo de développeuse">
@@ -127,11 +131,12 @@
   </section>
 
   <footer>
-    <p>&copy; 2025 Sarah Dev - Tous droits réservés</p>
+    <p>&copy; 2025 Maréme Thiaw - Tous droits réservés</p>
     <div class="socials">
       <a href="#"><i class="fab fa-linkedin"></i></a>
       <a href="#"><i class="fab fa-github"></i></a>
     </div>
+    <a href="#top" class="back-to-top"><i class="fas fa-arrow-up"></i> Haut de page</a>
   </footer>
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script src="script.js"></script> 
