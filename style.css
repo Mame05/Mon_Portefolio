@@ -20,10 +20,13 @@
     justify-content: space-between;
     align-items: center;
   }
-  nav ul {
+  .nav-links {
     list-style: none;
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
+    align-items: center;
+    margin: 0;
+    padding: 0;
   }
   nav a {
     color: #1e3c72;
@@ -51,6 +54,27 @@
   nav a:hover::after {
     width: 100%;
   }
+  /* Burger button caché par défaut */
+.burger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #1e3c72;
+  cursor: pointer;
+}
+.burger .icon-close {
+  display: none;
+}
+
+.burger.active .icon-open {
+  display: none;
+}
+
+.burger.active .icon-close {
+  display: inline;
+}
+
   .banner {
     background: linear-gradient(to right, #1e3c72, #2a5298);
     color: white;
@@ -308,22 +332,77 @@ h2::after {
   
   
   footer {
-    background: #222;
-    color: white;
+    background: linear-gradient(to right, #1e3c72, #2a5298); /* même ton que le header */
+    color: #fff;
+    padding: 2rem 1rem;
     text-align: center;
-    padding: 1rem;
+    font-size: 0.95rem;
+  }
+  footer p {
+    margin: 0;
+    font-weight: 300;
+    letter-spacing: 0.5px;
   }
   footer .socials {
     margin-top: 1rem;
   }
   footer .socials a {
-    color: white;
-    margin: 0 0.5rem;
-    font-size: 1.2rem;
+    color: #fff;
+    margin: 0 0.6rem;
+    font-size: 1.4rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  footer .socials a:hover {
+    transform: scale(1.2);
+    color: #ffdd57; /* couleur d'accent au survol */
   }
 
+  footer .back-to-top {
+    display: inline-block;
+    margin-top: 1.5rem;
+    color: #fff;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  footer .back-to-top i {
+    margin-right: 0.4rem;
+  }
+  
+  footer .back-to-top:hover {
+    color: #ffdd57; /* couleur d’accent au survol */
+  }
+  
+  /* Responsive pour petits écrans */
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 60%;
+    padding: 1rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
   /* Responsive Banner  */
-   /* Version desktop */
    @media (min-width: 768px) {
     .banner-container {
       flex-direction: row;
